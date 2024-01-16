@@ -96,3 +96,25 @@ hr {
     text-align: center;
     font-size: larger;
   }
+  .list {
+    position: relative;
+}
+
+.play-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 8px 16px;
+    background-color: #5bc8ac;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.play-button:hover {
+    background-color: #3b846a;
+}
+audio{
+  padding-bottom: 10%;
+}

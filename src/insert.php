@@ -22,6 +22,7 @@ echo '<form action="insert-output.php" method="post">
         楽曲名<input type="text" name="singer_name">
         画像パス<input type="text" name="img_path">
         カテゴリ<select name="category_id">';
+        
 
 // カテゴリテーブルからカテゴリ名を取得
 foreach ($pdo->query('SELECT * FROM category') as $row) {
@@ -29,6 +30,7 @@ foreach ($pdo->query('SELECT * FROM category') as $row) {
 }
 
 echo '</select>
+音楽パス<input type="text" name="mp3">
         <input type="submit" value="登録">
       </form>';
 ?>

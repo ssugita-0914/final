@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/list.css">
+    <link rel="stylesheet" type="text/css" href="css/updatain.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha256-Gn5384xq9R95NZ1FIqzA7EVrAAKPhK9IvBX3ILC9RA=" crossorigin="anonymous">
     <title>音楽更新画面</title>
 </head>
@@ -51,7 +51,9 @@ if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET['id'])) {
         }
 
         echo '</select>
-                <input type="submit" value="更新">
+        <span>
+                <input class="updata" type="submit" value="更新">
+                </span>
               </form>';
     } else {
         echo '指定されたIDの音楽データが見つかりません。';

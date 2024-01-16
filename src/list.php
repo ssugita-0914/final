@@ -26,7 +26,10 @@ foreach ($pdo->query('SELECT music.*, category.category_name FROM music
             <p id="mname">', $row['music_name'], '</p>
             <a id="sname">楽曲.', $row['singer_name'], '</a>
             <p id="category">カテゴリ: ', $row['category_name'], '</p>
-          </div>';
+            <audio controls src="', $row['mp3'], '" type="audio/mp3"愛してみてよ減るもんじゃないし</audio>
+          </div>
+          ';
+          
 }
 echo '</div>';
 ?>

@@ -17,8 +17,8 @@
  $pdo=new PDO('mysql:host=mysql220.phy.lolipop.lan;dbname=LAA1516806-final;charset=utf8','LAA1516806','Pass0914');
  echo '<h1>音楽登録画面</h1>
  <a href="./top.php">HOME</a><hr>';
-$sql=$pdo->prepare('insert into music values(null,?,?,?,?)');
-if($sql->execute([$_REQUEST['music_name'],$_REQUEST['singer_name'],$_REQUEST['img_path'],$_REQUEST['category_id']])){
+$sql=$pdo->prepare('insert into music values(null,?,?,?,?,?)');
+if($sql->execute([$_REQUEST['music_name'],$_REQUEST['singer_name'],$_REQUEST['img_path'],$_REQUEST['category_id'],$_REQUEST['mp3']])){
     echo '<p id="message>"追加に成功しました</p>';
     echo '<div>';
  foreach($pdo->query('SELECT music.*, category.category_name FROM music
@@ -28,6 +28,7 @@ if($sql->execute([$_REQUEST['music_name'],$_REQUEST['singer_name'],$_REQUEST['im
     <p id="mname">',$row['music_name'], '</p>
     <a id="sname">楽曲.', $row['singer_name'], '</a>   
     <p id="category">カテゴリ: ', $row['category_name'], '</p>
+    <p id="category">音楽パス: ', $row['mp3'], '</p>
     </div>
  </div>';
 }
