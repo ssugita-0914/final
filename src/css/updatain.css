@@ -2,6 +2,7 @@ body{
     background-color:black;
     color: white;
     font-weight: bold;
+    font-size: larger;
 }
 h1{
     text-align: center;
@@ -18,13 +19,13 @@ hr {
 	align-items: flex-start; 
 	justify-content: flex-end; */
   }
-  form{
+  /* form{
     background-color: #ffffff;
-  }
+  } */
   label{
     color: black;
   }
-  input.updata {
+  /* input.updata {
     overflow: hidden;
     padding: 1.5rem 6rem;
     color: #fff;
@@ -55,4 +56,13 @@ hr {
   input.updata:hover:before {
     -webkit-transform: translateX(-9%) translateY(-25%) rotate(135deg);
     transform: translateX(-9%) translateY(-25%) rotate(135deg);
+  } */
+  input.updata{
+    margin-bottom: 7%;
+  }
+  div{
+    position: relative;
+    text-align: center;
+    background-color: #ffffff;
+    margin: 0 33%;
   }

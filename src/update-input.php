@@ -35,14 +35,22 @@ if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET['id'])) {
               <a href="./top.php">HOME</a><hr>';
         echo '<form action="update-output.php" method="post">
                 <input type="hidden" name="music_id" value="' . $music_id . '">
-                <label for="music_name">音楽名</label>
+
+                    <div>
+               <p> <label for="music_name">音楽名</label>
                 <input type="text" name="music_name" value="' . $musicData['music_name'] . '">
-                <label for="singer_name">楽曲名</label>
+                </p>
+
+                <p><label for="singer_name">楽曲名</label>
                 <input type="text" name="singer_name" value="' . $musicData['singer_name'] . '">
-                <label for="img_path">画像パス</label>
+                </p>
+
+                <p><label for="img_path">画像パス</label>
                 <input type="text" name="img_path" value="' . $musicData['img'] . '">
-                <label for="category_id">カテゴリ</label>
-                <select name="category_id">';
+                </p>
+                <p><label for="category_id">カテゴリ</label>
+                <select name="category_id">
+                ';
                 
         // Loop through categories to populate the select box
         foreach ($categories as $category) {
@@ -50,11 +58,11 @@ if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET['id'])) {
             echo '<option value="' . $category['category_id'] . '" ' . $selected . '>' . $category['category_name'] . '</option>';
         }
 
-        echo '</select>
+        echo '</select></p>
         <span>
                 <input class="updata" type="submit" value="更新">
                 </span>
-              </form>';
+              </form></div>';
     } else {
         echo '指定されたIDの音楽データが見つかりません。';
     }
